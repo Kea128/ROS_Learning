@@ -1,0 +1,23 @@
+bg_B: 255
+bg_G: 50
+bg_R: 100
+my_turtle:
+  background_b: 255
+  background_g: 86
+  background_r: 69
+  bg_B: 255
+  bg_G: 50
+  bg_R: 100
+  param_B: 3.14
+param_A: 100
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_gyk_y7000_ubuntu20__40037: http://gyk-Y7000-Ubuntu20:40037/
+    host_gyk_y7000_ubuntu20__43467: http://gyk-Y7000-Ubuntu20:43467/
+rosversion: '1.16.0
+
+  '
+run_id: c0b7a348-1fb9-11ee-bf0f-e36bdd5907e0

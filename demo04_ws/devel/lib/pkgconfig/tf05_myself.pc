@@ -1,0 +1,8 @@
+prefix=/home/gyk/Y7000_ROS/demo04_ws/devel
+
+Name: tf05_myself
+Description: Description of tf05_myself
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

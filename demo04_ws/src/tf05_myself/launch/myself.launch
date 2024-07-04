@@ -1,0 +1,27 @@
+<launch>
+    <!-- 1.启动 turtle GUI 节点 -->
+    <!--  -->
+    <node pkg="turtlesim" type="turtlesim_node" name="myTurtle" output="screen" ns="TURTLE" > 
+        <!-- 话题重命名 -->
+        <remap from="/TURTLE/turtle1/cmd_vel" to="/velocity_01"/>
+        <remap from="/TURTLE/turtle2/cmd_vel" to="/velocity_02"/>
+        <remap from="/TURTLE/turtle1/pose" to="/pose_01"/>
+        <remap from="/TURTLE/turtle2/pose" to="/pose_02"/>
+    </node>
+
+    <!-- 2.生成新乌龟的节点 -->
+    <node pkg="tf05_myself" type="myself01_new_turtle" name="extraTurtle" output="screen" />
+
+    <!-- 3.键盘控制节点 -->
+    <node pkg="turtlesim" type="turtle_teleop_key" name="myTurtleTeleop" output="screen" ns="KEYBOARD" >
+        <remap from="/KEYBOARD/turtle1/cmd_vel" to="/velocity_01" />    
+    </node>
+
+    <!-- 4.启动坐标转换消息发布节点(启动两次，动态传参改变订阅的消息，即需要分别订阅两个pose) -->
+    <node pkg="tf05_myself" type="myself02_pub_turtle" name="myTurtle" args="/pose_01" output="screen" ns="pubTFs"/>
+    <node pkg="tf05_myself" type="myself02_pub_turtle" name="extraTurtle" args="/pose_02" output="screen" ns="pubTFs"/>
+
+    <!-- 5.需要订阅turtle1与turtle2相对于世界坐标系的消息，并转换为turtle1相对于turtle2的坐标关系，再生成速度消息，发布到turtle2上-->
+    <node pkg="tf05_myself" type="myself03_sub_turtle" name="poseSub" output="screen" ns="subTFs"/>
+
+</launch>
