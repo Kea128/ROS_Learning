@@ -22,6 +22,7 @@
     <node pkg="tf05_myself" type="myself02_pub_turtle" name="extraTurtle" args="/pose_02" output="screen" ns="pubTFs"/>
 
     <!-- 5.需要订阅turtle1与turtle2相对于世界坐标系的消息，并转换为turtle1相对于turtle2的坐标关系，再生成速度消息，发布到turtle2上-->
+    <!-- 这里添加一行 -->
     <node pkg="tf05_myself" type="myself03_sub_turtle" name="poseSub" output="screen" ns="subTFs"/>
 
 </launch>
