@@ -1,0 +1,8 @@
+digraph G {
+"world" -> "body/pose_02"[label=" Broadcaster: /pubTFs/extraTurtle\nAverage rate: 62.694\nBuffer length: 4.992\nMost recent transform: 1719992122.855\nOldest transform: 1719992117.862\n"];
+"world" -> "body/pose_01"[label=" Broadcaster: /pubTFs/myTurtle\nAverage rate: 62.695\nBuffer length: 4.992\nMost recent transform: 1719992122.855\nOldest transform: 1719992117.862\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1719992122.8712938"[ shape=plaintext ] ;
+}->"world";
+}

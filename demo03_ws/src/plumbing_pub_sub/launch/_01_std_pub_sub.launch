@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="plumbing_pub_sub" type="demo01_pub" name="std_pub" />
+    <node pkg="plumbing_pub_sub" type="demo02_sub" name="std_sub" output="screen" />
+</launch> 
