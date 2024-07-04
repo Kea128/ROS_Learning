@@ -1,8 +1,0 @@
-prefix=/home/gyk/demo01_ws/devel
-
-Name: helloword
-Description: Description of helloword
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

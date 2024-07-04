@@ -11,4 +11,3 @@ int main(int argc, char *argv[])
     ROS_INFO("hello world!");
     return 0;
 }
-

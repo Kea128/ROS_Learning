@@ -1,8 +1,0 @@
-prefix=/home/gyk/Y7000_ROS/demo03_ws/devel
-
-Name: rename02_topic
-Description: Description of rename02_topic
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

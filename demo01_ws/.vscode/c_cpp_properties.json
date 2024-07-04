@@ -7,8 +7,8 @@
       },
       "includePath": [
         "/opt/ros/noetic/include/**",
-        "/home/gyk/demo01_ws/src/helloword/include/**",
-        "/home/gyk/demo01_ws/src/turtlesim/include/**",
+        "/home/gyk/ROS_Learning/demo01_ws/src/helloword/include/**",
+        "/home/gyk/ROS_Learning/demo01_ws/src/turtlesim/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",

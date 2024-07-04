@@ -1,8 +1,0 @@
-prefix=/home/gyk/demo01_ws/devel
-
-Name: turtlesim
-Description: Description of turtlesim
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
