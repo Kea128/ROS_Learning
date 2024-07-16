@@ -1,13 +1,13 @@
 digraph G {
 node [shape=box];
-"base_footptint" [label="base_footptint"];
+"base_footprint" [label="base_footprint"];
 "base_link" [label="base_link"];
 "back_wheel" [label="back_wheel"];
 "front_wheel" [label="front_wheel"];
 "left_wheel" [label="left_wheel"];
 "right_wheel" [label="right_wheel"];
 node [shape=ellipse, color=blue, fontcolor=blue];
-"base_footptint" -> "link2footprint" [label="xyz: 0 0 0.055 \nrpy: 0 -0 0"]
+"base_footprint" -> "link2footprint" [label="xyz: 0 0 0.055 \nrpy: 0 -0 0"]
 "link2footprint" -> "base_link"
 "base_link" -> "back2link" [label="xyz: -0.08 0 -0.0475 \nrpy: 0 -0 0"]
 "back2link" -> "back_wheel"
