@@ -1,9 +1,10 @@
-<robot name="my_sensors" xmlns:xacro="http://wiki.ros.org/xacro">
-  <!-- 被引用的link -->
+<robot name="my_sensors"
+  xmlns:xacro="http://wiki.ros.org/xacro">
+  <!-- 被引用的link名字，这里link名就叫camera -->
   <gazebo reference="camera">
     <!-- 类型设置为 camara -->
     <sensor type="camera" name="camera_node">
-      <update_rate>30.0</update_rate> <!-- 更新频率 -->
+      <update_rate>30.0</update_rate>      <!-- 更新频率 -->
       <!-- 摄像头基本信息设置 -->
       <camera name="head">
         <horizontal_fov>1.3962634</horizontal_fov>
@@ -26,9 +27,11 @@
       <plugin name="gazebo_camera" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
+        <!-- 为发布话题设置的命名空间 随意设置 -->
         <cameraName>/camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <!-- 被引用的link名字，这里link名就叫camera -->
         <frameName>camera</frameName>
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>0.0</distortionK1>

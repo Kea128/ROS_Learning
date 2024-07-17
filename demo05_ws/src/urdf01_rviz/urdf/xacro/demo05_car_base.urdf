@@ -32,5 +32,86 @@
     <!-- 关节z上的设置 = 车体高度/2 + 离地间距 -->
     <origin rpy="0 0 0" xyz="0 0 0.055"/>
   </joint>
+  <!-- 宽度 -->
+  <!-- 3.驱动轮  -->
+  <link name="left_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.015" radius="0.0325"/>
+      </geometry>
+      <origin rpy="1.5707963 0 0" xyz="0 0 0"/>
+      <material name="wheel_color">
+        <color rgba="0 0 0 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="left2link" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <!-- z=0.055-0.0325 -->
+    <origin rpy="0 0 0" xyz="0 0.1 -0.0225"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <!-- 3.驱动轮  -->
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.015" radius="0.0325"/>
+      </geometry>
+      <origin rpy="1.5707963 0 0" xyz="0 0 0"/>
+      <material name="wheel_color">
+        <color rgba="0 0 0 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="right2link" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <!-- z=0.055-0.0325 -->
+    <origin rpy="0 0 0" xyz="0 -0.1 -0.0225"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <!-- 4.万向轮  -->
+  <!-- 4.1 link -->
+  <link name="front_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.0075"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="wheel_color">
+        <color rgba="0 0 0 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <!-- 4.2 joint -->
+  <joint name="front2link" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_wheel"/>
+    <!-- z=0.055-0.0325 -->
+    <origin rpy="0 0 0" xyz="0.08 0 -0.0475"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <!-- 4.万向轮  -->
+  <!-- 4.1 link -->
+  <link name="back_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.0075"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="wheel_color">
+        <color rgba="0 0 0 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <!-- 4.2 joint -->
+  <joint name="back2link" type="continuous">
+    <parent link="base_link"/>
+    <child link="back_wheel"/>
+    <!-- z=0.055-0.0325 -->
+    <origin rpy="0 0 0" xyz="-0.08 0 -0.0475"/>
+    <axis xyz="0 1 0"/>
+  </joint>
 </robot>
 

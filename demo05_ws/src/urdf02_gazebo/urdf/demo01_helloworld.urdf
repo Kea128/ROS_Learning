@@ -24,7 +24,7 @@
             <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
         </inertial>
     </link>
-    <!-- gazebo有自己的颜色设置 -->
+    <!-- gazebo有自己的颜色设置(base_link表示哪个连杆) -->
     <gazebo reference="base_link">
         <material>Gazebo/Red</material>
     </gazebo>
