@@ -1,0 +1,8 @@
+<launch>
+    <!-- 该launch文件发布map -->
+    <!-- 设置地图的配置文件 -->
+    <arg name="map" default="nav.yaml" />
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <node pkg="map_server" type="map_server" name="map_server" args="$(find nav_demo)/map/$(arg map)"/>
+    <!-- <node pkg="map_server" type="map_server" name="map_server" args="/home/gyk/ROS_Learning/demo05_ws/src/nav_demo/map/$(arg map)"/> -->
+</launch>

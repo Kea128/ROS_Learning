@@ -1,4 +1,5 @@
 <launch>
+    <!-- $(find nav_demo)/map/nav 表示/nav_demo功能包/map/nav -->
     <arg name="filename" value="$(find nav_demo)/map/nav" />
-    <node name="map_save" pkg="map_server" type="map_saver" args="-f $(arg filename)" />
+    <node pkg="map_server" type="map_saver" name="map_save" args="-f $(arg filename)" />
 </launch>
