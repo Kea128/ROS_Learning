@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     ros::NodeHandle nh;
     // 4.创建发布者对象
     ros::Publisher pub = nh.advertise<std_msgs::String>("fang", 10);
+    
     // 5.编写发布逻辑与发布数据
     // 要求以10HZ的频率发布数据，并且文本后添加编号
     // 先创建被发布的消息

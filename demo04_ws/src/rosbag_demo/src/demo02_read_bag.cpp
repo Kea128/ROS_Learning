@@ -9,7 +9,6 @@ int main(int argc, char *argv[]) {
 
   ros::init(argc, argv, "bag_read");
   ros::NodeHandle nh;
-
   //创建 bag 对象
   rosbag::Bag bag;
   //打开 bag 文件
