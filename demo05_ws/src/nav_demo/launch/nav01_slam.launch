@@ -3,7 +3,7 @@
   <param name="use_sim_time" value="true"/>
   <!-- gmapping 节点 -->
   <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
-    <!-- 设置雷达话题 -->
+    <!-- 设置雷达话题,之前的雷达消息就是scan -->
     <remap from="scan" to="scan"/>
     <!-- 关键参数：坐标系 -->
     <param name="base_frame" value="base_footprint" />
@@ -42,7 +42,7 @@
     <param name="lasamplestep" value="0.005"/>
   </node>
 
-  <!-- 必须发布 雷达坐标系→基坐标系-->
+  <!-- 必须发布 雷达坐标系→基坐标系 的转换关系-->
   <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
 
   <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
